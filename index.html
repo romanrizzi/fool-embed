@@ -8,9 +8,17 @@
   </head>
 
   <body>
-    <div class='example'>
-      <h3>Backstage topics</h3>
-      <d-topics-list discourse-url="https://community-staging.fool.com" per-page="5" category="18"></d-topics-list>
-    </div>
+    <div id='discourse-comments'></div>
+
+    <script type="text/javascript">
+      DiscourseEmbed = { discourseUrl: 'https://community-staging.fool.com/',
+                         discourseEmbedUrl: window.location.href };
+
+      (function() {
+        var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+        d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+      })();
+    </script>
   </body>
 </html>
